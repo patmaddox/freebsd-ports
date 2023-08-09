@@ -13,7 +13,7 @@ LICENSE=	APACHE20
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
-RUN_DEPENDS+= 	${PYTHONPREFIX_SITELIBDIR}/agate:textproc/py-agate@${PY_FLAVOR} \
+RUN_DEPENDS= 	${PYTHONPREFIX_SITELIBDIR}/agate:textproc/py-agate@${PY_FLAVOR} \
 	${PYTHONPREFIX_SITELIBDIR}/colorama:devel/py-colorama@${PY_FLAVOR} \
 	${PYTHONPREFIX_SITELIBDIR}/click:devel/py-click@${PY_FLAVOR} \
 	${PYTHONPREFIX_SITELIBDIR}/dateutil:devel/py-dateutil@${PY_FLAVOR} \
