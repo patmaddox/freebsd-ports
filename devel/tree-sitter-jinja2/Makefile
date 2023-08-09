@@ -9,10 +9,10 @@ WWW=		https://github.com/dbt-labs/tree-sitter-jinja2
 
 LICENSE=	APACHE20
 
-USES=		gmake
+USES=		python
+USE_PYTHON=	autoplist concurrent distutils
 
-#USES=		python
-#USE_PYTHON=	autoplist concurrent distutils
+BUILD_DEPENDS= ${PYTHONPREFIX_SITELIBDIR}/setuptools_dso/__init__.py:devel/py-setuptools_dso@${PY_FLAVOR}
 
 #RUN_DEPENDS+= 	${PYTHONPREFIX_SITELIBDIR}/agate:textproc/py-agate@${PY_FLAVOR} \
 #	${PYTHONPREFIX_SITELIBDIR}/click:devel/py-click@${PY_FLAVOR} \
