@@ -5,13 +5,10 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	A Database Change Management tool for Snowflake
+COMMENT=	Database Change Management tool for Snowflake
 WWW=		https://github.com/Snowflake-Labs/schemachange
 
 LICENSE=	APACHE20
-
-USES=		python
-USE_PYTHON=	autoplist concurrent pep517
 
 PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pandas>0:math/py-pandas@${PY_FLAVOR} \
@@ -26,6 +23,9 @@ RUN_DEPENDS=	${PY_DEPENDS}
 
 TEST_DEPENDS=	${PY_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
+
+USES=		python
+USE_PYTHON=	autoplist concurrent pep517
 
 do-test:
 	@(cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m pytest)
