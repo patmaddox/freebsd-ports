@@ -13,7 +13,7 @@ LICENSE=	APACHE20
 USES=		python
 USE_PYTHON=	concurrent distutils
 
-RUN_DEPENDS=	dbt:devel/py-dbt-core \
-		databases/py-duckdb@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbt-core>0:databases/py-dbt-core@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}duckdb>0:databases/py-duckdb@${PY_FLAVOR}
 
 .include <bsd.port.mk>
