@@ -1,6 +1,6 @@
 PORTNAME=	dbt_semantic_interfaces
 PORTVERSION=	0.2.0
-CATEGORIES=	devel python
+CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
