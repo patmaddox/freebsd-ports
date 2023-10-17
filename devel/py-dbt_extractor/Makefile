@@ -13,13 +13,8 @@ LICENSE=	APACHE20
 USES=		cargo python
 USE_PYTHON=	autoplist concurrent pep517
 
-BUILD_DEPENDS=	maturin:devel/py-maturin@${PY_FLAVOR}
-
-#		${PYTHONPREFIX_SITELIBDIR}/tree_sitter/__init__.py:devel/py-tree_sitter@${PY_FLAVOR} \
-#		${PYTHONPREFIX_SITELIBDIR}/tree_sitter_jinja2/__init__.py:devel/tree-sitter-jinja2
-#
-#RUN_DEPENDS=	${PYTHONPREFIX_SITELIBDIR}/tree_sitter/__init__.py:devel/py-tree_sitter \
-#		${PYTHONPREFIX_SITELIBDIR}/tree_sitter_jinja2/__init__.py:devel/tree-sitter-jinja2
+BUILD_DEPENDS=	maturin:devel/py-maturin@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}tree_sitter>0:devel/py-tree_sitter@${PY_FLAVOR}
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no

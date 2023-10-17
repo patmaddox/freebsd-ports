@@ -12,6 +12,4 @@ LICENSE=	MIT
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
-#LIB_DEPENDS=	libtree-sitter.so:devel/tree-sitter
-
 .include <bsd.port.mk>
