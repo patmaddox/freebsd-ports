@@ -20,6 +20,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=4.18:devel/py-jsonschema@${PY_FLA
 
 BUILD_DEPENDS=	wheel-${PYTHON_VER}:devel/py-wheel@${PY_FLAVOR} \
 		${PY_DEPENDS}
+
 RUN_DEPENDS=	${PY_DEPENDS}
 
 .include <bsd.port.mk>
