@@ -1,7 +1,0 @@
-A better TOML library for python implemented in rust.
-
-Why Use rtoml
-
-Correctness: rtoml is based on the widely used and very stable toml-rs library, it passes all the standard TOML tests as well as having 100% coverage on python code. Other TOML libraries for python I tried all failed to parse some valid TOML.
-
-Performance: see github.com/pwwang/toml-bench - rtoml is much faster than pure Python TOML libraries.
