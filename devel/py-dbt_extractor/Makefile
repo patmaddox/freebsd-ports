@@ -27,4 +27,8 @@ pre-build:
 post-extract:
 	ln -s ${WRKDIR}/tree-sitter-jinja2-*/ ${WRKDIR}/${PORTNAME}-${PORTVERSION}/tree-sitter-dbt-jinja
 
+do-test:
+	@(cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} PYO3_PYTHON=${PYTHON_CMD} ${CARGO} test)
+
+
 .include <bsd.port.mk>
