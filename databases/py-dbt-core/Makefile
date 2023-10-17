@@ -24,10 +24,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}agate>0:textproc/py-agate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pathspec>0:devel/py-pathspec@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}isodate>0:devel/py-isodate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlparse>0:databases/py-sqlparse@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dbt_extractor>0:devel/py-dbt_extractor@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}dbt-extractor>0:devel/py-dbt-extractor@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hologram>0:devel/py-hologram@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}minimal-snowplow-tracker>0:devel/py-minimal-snowplow-tracker@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dbt_semantic_interfaces>0:databases/py-dbt_semantic_interfaces@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}dbt-semantic-interfaces>0:databases/py-dbt-semantic-interfaces@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}protobuf>0:devel/py-protobuf@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR} \

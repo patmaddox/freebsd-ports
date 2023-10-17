@@ -1,9 +1,8 @@
-PORTNAME=	snowflake-connector
+PORTNAME=	snowflake-connector-python
 PORTVERSION=	3.2.1
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	snowflake-connector-python-${PORTVERSION}
 
 MAINTAINER=	pat@patmaddox.com
 COMMENT=	Snowflake Connector for Python
