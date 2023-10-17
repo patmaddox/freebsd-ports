@@ -34,7 +34,10 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1crypto<2.0:devel/py-asn1crypto@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}platformdirs>0:devel/py-platformdirs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tomlkit>0:textproc/py-tomlkit@${PY_FLAVOR}
 
-BUILD_DEPENDS=	${PY_DEPENDS}
+BUILD_DEPENDS=	${PY_DEPENDS} \
+		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyarrow>0:databases/py-pyarrow@${PY_FLAVOR}
+
 RUN_DEPENDS=	${PY_DEPENDS}
 
 .include <bsd.port.mk>

@@ -13,4 +13,7 @@ LICENSE=	APACHE20
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
+
 .include <bsd.port.mk>

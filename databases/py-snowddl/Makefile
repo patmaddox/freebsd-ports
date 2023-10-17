@@ -13,7 +13,7 @@ LICENSE=	APACHE20
 USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
-PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=4.14:devel/py-jsonschema@${PY_FLAVOR} \
+PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=4.18:devel/py-jsonschema@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pydantic2>=2.4:devel/py-pydantic2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=6.0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}snowflake-connector>=3.0:databases/py-snowflake-connector@${PY_FLAVOR}
