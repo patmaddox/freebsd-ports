@@ -11,7 +11,7 @@ WWW=		https://github.com/dbt-labs/dbt-snowflake
 LICENSE=	APACHE20
 
 USES=		python
-USE_PYTHON=	concurrent distutils
+USE_PYTHON=	autoplist concurrent distutils
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}agate>0:textproc/py-agate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dbt-core>0:databases/py-dbt-core@${PY_FLAVOR} \
