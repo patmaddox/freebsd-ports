@@ -1,6 +1,7 @@
 PORTNAME=	snowflake-connector
-PORTVERSION=	3.1.0
+PORTVERSION=	3.3.0
 CATEGORIES=	databases python
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	snowflake-connector-python-${PORTVERSION}
 
@@ -35,8 +36,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1crypto<2.0:devel/py-asn1crypto@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}tomlkit>0:textproc/py-tomlkit@${PY_FLAVOR}
 
 BUILD_DEPENDS=	${PY_DEPENDS} \
-		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyarrow>0:databases/py-pyarrow@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR}
 
 RUN_DEPENDS=	${PY_DEPENDS}
 
