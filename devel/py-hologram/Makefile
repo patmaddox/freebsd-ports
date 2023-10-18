@@ -8,7 +8,7 @@ MAINTAINER=	pat@patmaddox.com
 COMMENT=	JSON schema generation from dataclasses
 WWW=		https://github.com/dbt-labs/hologram
 
-LICENSE=	APACHE20
+LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>0:devel/py-jsonschema@${PY_FLAVOR}
