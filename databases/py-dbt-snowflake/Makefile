@@ -11,8 +11,9 @@ WWW=		https://github.com/dbt-labs/dbt-snowflake
 LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}agate>0:textproc/py-agate@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dbt-core>0:databases/py-dbt-core@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}snowflake-connector-python>0:databases/py-snowflake-connector-python@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}dbt-core>=1.6,<2:databases/py-dbt-core@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}snowflake-connector-python>=3.0,<4:databases/py-snowflake-connector-python@${PY_FLAVOR} \
+	        ${PYTHON_PKGNAMEPREFIX}keyring>0:security/py-keyring@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
