@@ -6,13 +6,10 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	dbt_semantic_interfaces-${PORTVERSION}
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	The shared semantic layer definitions that dbt-core and MetricFlow use.
+COMMENT=	Shared semantic layer definitions that dbt-core and MetricFlow use
 WWW=		https://github.com/dbt-labs/dbt-semantic-interfaces
 
 LICENSE=	APACHE20
-
-USES=		python
-USE_PYTHON=	autoplist concurrent pep517
 
 BUILD_DEPENDS=	hatch:devel/py-hatch@${PY_FLAVOR} \
 		hatchling:devel/py-hatchling@${PY_FLAVOR}
@@ -26,5 +23,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pydantic>0:devel/py-pydantic@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}importlib-metadata>0:devel/py-importlib-metadata@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR}
+
+USES=		python
+USE_PYTHON=	autoplist concurrent pep517
 
 .include <bsd.port.mk>

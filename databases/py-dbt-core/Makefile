@@ -5,13 +5,10 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.
+COMMENT=	With dbt, build analytics the way engineers build applications
 WWW=		https://github.com/dbt-labs/dbt-core
 
 LICENSE=	APACHE20
-
-USES=		python
-USE_PYTHON=	autoplist concurrent distutils
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}agate>0:textproc/py-agate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
@@ -37,5 +34,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}agate>0:textproc/py-agate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}idna>0:dns/py-idna@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR}
+
+USES=		python
+USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

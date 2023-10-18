@@ -5,7 +5,7 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	dbt adapter for Snowflake
+COMMENT=	Snowflake adapter plugin for dbt
 WWW=		https://github.com/dbt-labs/dbt-snowflake
 
 LICENSE=	APACHE20

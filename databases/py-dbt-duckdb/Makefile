@@ -5,7 +5,7 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	dbt adapter for DuckDB
+COMMENT=	DuckDB adapter plugin for dbt (data build tool)
 WWW=		https://github.com/jwills/dbt-duckdb
 
 LICENSE=	APACHE20

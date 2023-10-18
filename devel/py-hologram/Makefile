@@ -5,15 +5,15 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	A library for automatically generating Draft 7 JSON Schemas from Python dataclasses
+COMMENT=	JSON schema generation from dataclasses
 WWW=		https://github.com/dbt-labs/hologram
 
 LICENSE=	APACHE20
 
-USES=		python
-USE_PYTHON=	autoplist concurrent distutils
-
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>0:devel/py-jsonschema@${PY_FLAVOR}
+
+USES=		python
+USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>

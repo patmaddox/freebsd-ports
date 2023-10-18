@@ -10,6 +10,11 @@ WWW=		https://github.com/snowflakedb/snowflake-connector-python
 
 LICENSE=	APACHE20
 
+BUILD_DEPENDS=	${PY_DEPENDS} \
+		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR}
+
+RUN_DEPENDS=	${PY_DEPENDS}
+
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
@@ -33,10 +38,5 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1crypto<2.0:devel/py-asn1crypto@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}sortedcontainers>=2.4.0:devel/py-sortedcontainers@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}platformdirs>0:devel/py-platformdirs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tomlkit>0:textproc/py-tomlkit@${PY_FLAVOR}
-
-BUILD_DEPENDS=	${PY_DEPENDS} \
-		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR}
-
-RUN_DEPENDS=	${PY_DEPENDS}
 
 .include <bsd.port.mk>

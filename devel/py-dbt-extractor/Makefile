@@ -7,7 +7,7 @@ DISTNAME=	dbt_extractor-${PORTVERSION}
 DISTFILES=	${DISTNAME}.tar.gz
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	Processes the most common jinja value templates in dbt model files
+COMMENT=	Analyze and extract information from Jinja used in dbt projects
 WWW=		https://github.com/dbt-labs/dbt-extractor/
 
 LICENSE=	APACHE20
