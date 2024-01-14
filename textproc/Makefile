@@ -140,6 +140,7 @@
     SUBDIR += dbacl
     SUBDIR += dblatex
     SUBDIR += denature
+    SUBDIR += denote.el
     SUBDIR += dict
     SUBDIR += dictem
     SUBDIR += dictfmt
