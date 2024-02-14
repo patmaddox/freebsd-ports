@@ -856,6 +856,7 @@
     SUBDIR += go-bindata
     SUBDIR += go-bindata-assetfs
     SUBDIR += go-git
+    SUBDIR += go-mode.el
     SUBDIR += go-perf
     SUBDIR += go-protobuf
     SUBDIR += go-tools
@@ -1662,6 +1663,7 @@
     SUBDIR += nss_wrapper
     SUBDIR += nsync
     SUBDIR += nuitka
+    SUBDIR += ob-go
     SUBDIR += ob-rust
     SUBDIR += obby
     SUBDIR += objconv
