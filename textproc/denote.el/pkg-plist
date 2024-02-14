@@ -1,0 +1,6 @@
+%%EMACS_SITE_LISPDIR%%/denote-journal-extras.el
+%%EMACS_SITE_LISPDIR%%/denote-org-dblock.el
+%%EMACS_SITE_LISPDIR%%/denote-rename-buffer.el
+%%EMACS_SITE_LISPDIR%%/denote-silo-extras.el
+%%EMACS_SITE_LISPDIR%%/denote-sort.el
+%%EMACS_SITE_LISPDIR%%/denote.el

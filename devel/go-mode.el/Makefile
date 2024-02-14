@@ -1,20 +1,20 @@
-PORTNAME=	ox-gfm.el
-PORTVERSION=	1.0p20231215.1901
-CATEGORIES=	textproc
+PORTNAME=	go-mode.el
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.6.0
+CATEGORIES=	devel
 
 MAINTAINER=	pat@patmaddox.com
-COMMENT=	Github Flavored Markdown exporter for Org Mode
-WWW=		https://github.com/larstvei/ox-gfm
+COMMENT=	Emacs mode for the Go programming language
+WWW=		https://github.com/dominikh/go-mode.el
 
-LICENSE=	GPLv3+
+LICENSE=	BSD3CLAUSE
 
 USES=			emacs
 EMACS_NO_DEPENDS=	yes
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	larstvei
-GH_PROJECT=	ox-gfm
-GH_TAGNAME=	4f774f1
+GH_ACCOUNT=	dominikh
+GH_PROJECT=	go-mode.el
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -27,6 +27,6 @@ do-install:
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.md ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
