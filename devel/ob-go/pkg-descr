@@ -1,0 +1,5 @@
+ob-go enables Org-Babel support for evaluating go code. It was created
+based on the usage of ob-C. The go code is compiled and run via the go
+run command. If a main function isn't present, by default the code is
+wrapped in a simple main func. If :package option isn't set and no
+package is declared in the code, then the main package is declared.
