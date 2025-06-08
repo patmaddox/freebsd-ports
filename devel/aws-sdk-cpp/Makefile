@@ -22,7 +22,6 @@ LIB_DEPENDS=	libaws-c-auth.so:security/aws-c-auth \
 		libaws-checksums.so:devel/aws-checksums \
 		libaws-crt-cpp.so:devel/aws-crt-cpp \
 		libcurl.so:ftp/curl \
-		libpulse.so:audio/pulseaudio \
 		libs2n.so:security/s2n-tls
 
 USES=		cmake:testing localbase:ldflags pkgconfig ssl
@@ -37,6 +36,14 @@ CMAKE_TESTING_ON=	ENABLE_TESTING
 CMAKE_TESTING_TARGET=	# No internal target for running tests. Run via post-test.
 
 BUILD_ONLY?=
+
+OPTIONS_DEFINE=		TEST PULSEAUDIO
+OPTIONS_DEFAULT=	PULSEAUDIO
+OPTIONS_SUB=		yes
+
+PULSEAUDIO_VARS=	LIB_DEPENDS+=libpulse.so:audio/pulseaudio
+
+TEST_CMAKE_BOOL=	ENABLE_TESTING
 
 pre-everything::
 	@${ECHO_MSG}
