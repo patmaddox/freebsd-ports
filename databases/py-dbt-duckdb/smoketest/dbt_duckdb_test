@@ -1,0 +1,74 @@
+#!/usr/bin/env atf-sh
+
+atf_init_test_cases() {
+	atf_add_test_case register_plugin
+	atf_add_test_case build_project
+}
+
+setup() {
+	export HOME="${PWD}"
+	export DBT_PROFILES_DIR="${PWD}"
+	# dbt reports anonymous usage back to its vendor on every run
+	#export DO_NOT_TRACK=1
+}
+
+atf_test_case register_plugin
+register_plugin_head() {
+	atf_set "descr" "dbt discovers duckdb as an adapter plugin"
+	atf_set "require.progs" "dbt"
+}
+register_plugin_body() {
+	setup
+	atf_check -s exit:0 -o match:'duckdb' dbt --version
+}
+
+atf_test_case build_project
+build_project_head() {
+	atf_set "descr" "dbt build seeds, models and tests through duckdb"
+	atf_set "require.progs" "dbt"
+}
+build_project_body() {
+	setup
+	mkdir -p models seeds
+
+	cat >profiles.yml <<-EOF
+	smoke:
+	  target: dev
+	  outputs:
+	    dev:
+	      type: duckdb
+	      path: ${PWD}/smoke.duckdb
+	      threads: 1
+	EOF
+
+	cat >dbt_project.yml <<-'EOF'
+	name: 'smoke'
+	version: '1.0.0'
+	config-version: 2
+	profile: 'smoke'
+	EOF
+
+	cat >seeds/things.csv <<-'EOF'
+	id,name
+	1,alpha
+	2,beta
+	EOF
+
+	cat >models/things_upper.sql <<-'EOF'
+	select id, upper(name) as name from {{ ref('things') }}
+	EOF
+
+	cat >models/schema.yml <<-'EOF'
+	version: 2
+	models:
+	  - name: things_upper
+	    columns:
+	      - name: id
+	        tests:
+	          - unique
+	          - not_null
+	EOF
+
+	atf_check -s exit:0 -o ignore -e ignore dbt build
+	atf_check test -s smoke.duckdb
+}

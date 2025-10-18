@@ -37,6 +37,7 @@
     SUBDIR += ebusd
     SUBDIR += echolinux
     SUBDIR += emacs-eat
+    SUBDIR += emacs-libvterm
     SUBDIR += ems-flasher
     SUBDIR += fl_moxgen
     SUBDIR += flamp

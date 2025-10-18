@@ -1,0 +1,7 @@
+%%EMACS_SITE_LISPDIR%%/prescient/company-prescient.el
+%%EMACS_SITE_LISPDIR%%/prescient/corfu-prescient.el
+%%EMACS_SITE_LISPDIR%%/prescient/ivy-prescient.el
+%%EMACS_SITE_LISPDIR%%/prescient/prescient.el
+%%EMACS_SITE_LISPDIR%%/prescient/selectrum-prescient.el
+%%EMACS_SITE_LISPDIR%%/prescient/vertico-prescient.el
+%%PORTDOCS%%%%DOCSDIR%%/README.md

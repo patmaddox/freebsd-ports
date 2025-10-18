@@ -14,7 +14,7 @@ if [ -r "${common_functions}" ]; then
 fi
 
 category_regex="($(make -VSUBDIR | sed 's# #\|#g'))"
-newish_files=$(git diff --name-only --cached --diff-filter=ACR | grep -E "^${category_regex}/[^/]+/[^/]+$")
+newish_files=$(jj diff --summary | awk '/^[AM]/ {print $2}' | grep -E "^${category_regex}/[^/]+/[^/]+$")
 
 status=0
 if [ $? -eq 0 ] ; then
