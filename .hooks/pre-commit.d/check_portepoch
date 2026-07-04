@@ -10,8 +10,8 @@ fi
 
 check_epoch() {
 	local makefile="$1"
-	local old_epoch=$(git diff --cached -U0 "${makefile}" | grep '^-PORTEPOCH.*=' | grep -oE '[0-9]+')
-	local new_epoch=$(git diff --cached -U0 "${makefile}" | grep '^+PORTEPOCH.*=' | grep -oE '[0-9]+')
+	local old_epoch=$(jj diff --git "${makefile}" | grep '^-PORTEPOCH.*=' | grep -oE '[0-9]+')
+	local new_epoch=$(jj diff --git "${makefile}" | grep '^\+PORTEPOCH.*=' | grep -oE '[0-9]+')
 	if [ -z "${new_epoch}" -a -n "${old_epoch}" ] ; then
 		pre_commit_error "dropped PORTEPOCH ${old_epoch} in ${makefile}"
 		exit 1
@@ -24,7 +24,7 @@ check_epoch() {
 	fi
 }
 
-modified_makefiles=$(git diff --name-only --cached --diff-filter=M -GPORTEPOCH | grep -E '^[^/]+/[^/]+/Makefile$')
+modified_makefiles=$(jj diff --summary | awk '/^M/ {print $2}' | grep -E '^[^/]+/[^/]+/Makefile$')
 if [ $? -eq 0 ] ; then
 	for modified_makefile in ${modified_makefiles} ; do
 		check_epoch ${modified_makefile}

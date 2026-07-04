@@ -8,7 +8,7 @@ if [ -r "${common_functions}" ]; then
 	. "${common_functions}"
 fi
 
-newish_makefiles=$(git diff --name-only --cached --diff-filter=ACR | grep -E '^[^/]+/[^/]+/Makefile$')
+newish_makefiles=$(jj diff --summary | awk '/^[AM]/ {print $2}' | grep -E '^[^/]+/[^/]+/Makefile$')
 if [ $? -eq 0 ] ; then
 	for newish_makefile in ${newish_makefiles} ; do
 		category=$(echo "${newish_makefile}" | awk -F '/' '{print $1}')

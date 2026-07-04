@@ -8,7 +8,7 @@ if [ -r "${common_functions}" ]; then
 	. "${common_functions}"
 fi
 
-makefiles=$(git diff --name-only --cached --diff-filter=ACMR | grep -E '^[^/]+/[^/]+/Makefile$')
+makefiles=$(jj diff --summary | awk '/^[AM]/ {print $2}' | grep -E '^[^/]+/[^/]+/Makefile$')
 if [ $? -eq 0 ] ; then
 	for makefile in ${makefiles} ; do
 		created_by=$(head -n1 ${makefile} | awk -F : '/Created by/{print $NF}')

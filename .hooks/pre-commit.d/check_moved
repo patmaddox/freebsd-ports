@@ -8,10 +8,9 @@ if [ -r "${common_functions}" ]; then
 	. "${common_functions}"
 fi
 
-moved_changed=$(git diff --name-only --cached --diff-filter=M | grep -E '^MOVED$')
+moved_changed=$(jj diff --summary | awk '/^M/ {print $2}' | grep -E '^MOVED$')
 if [ $? -eq 0 ] ; then
-	# git changes to root directory of the tree to run hooks
-	tree=$(git rev-parse --show-toplevel)
+	tree=$(jj root)
 	# check the last seven days
 	lastdate=$(date -v-7d "+%Y-%m-%d")
 
